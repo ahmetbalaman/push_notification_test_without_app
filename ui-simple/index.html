@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Push Test</title>
+
+    <!-- PWA için -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- iOS için -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Push Test">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <link rel="stylesheet" href="../ui/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔔 Web Push Test</h1>
+        <p style="text-align: center; opacity: 0.7; margin-bottom: 20px;">Native Web Push API</p>
+
+        <div class="card">
+            <h2>Bildirim İzni</h2>
+            <p id="permission-status">Durum: Kontrol ediliyor...</p>
+            <button id="enable-btn" class="btn btn-primary">Bildirimleri Etkinleştir</button>
+        </div>
+
+        <div class="card">
+            <h2>Bildirim Gönder</h2>
+            <div class="form-group">
+                <label>Başlık</label>
+                <input type="text" id="title" value="Test Bildirimi" />
+            </div>
+            <div class="form-group">
+                <label>Mesaj</label>
+                <input type="text" id="body" value="Bu bir bildirimdir!" />
+            </div>
+            <button id="send-btn" class="btn btn-success">Gönder</button>
+        </div>
+
+        <div class="card">
+            <h2>Zamanlanmış Bildirim</h2>
+            <div class="form-group">
+                <label>Saat</label>
+                <input type="time" id="schedule-time" />
+            </div>
+            <button id="schedule-btn" class="btn btn-warning">Zamanla</button>
+        </div>
+
+        <div id="log" class="log"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
