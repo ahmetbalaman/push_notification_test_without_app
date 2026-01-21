@@ -130,6 +130,31 @@ MIT License - İstediğiniz gibi kullanın!
 
 ---
 
+## ⏰ Zamanlanmış Bildirimler (Cron Job)
+
+Zamanlanmış bildirimlerin çalışması için `cron.php` dosyasının düzenli olarak çalıştırılması gerekir.
+
+### Hostinger'da Cron Job Kurulumu
+
+1. **hPanel'e giriş yap** → Hosting → Gelişmiş → Cron Jobs
+2. **Yeni cron job ekle:**
+   ```
+   Zamanlama: Her dakika (*/1 * * * *)
+   Komut: /usr/bin/php /home/u123456789/domains/yourdomain.com/public_html/api-simple/cron.php
+   ```
+3. **Kaydet**
+
+> ⚠️ **Not:** Dosya yolunu kendi Hostinger dizinine göre güncelle. 
+> hPanel → Dosyalar → Dosya Yöneticisi'nden tam yolu görebilirsin.
+
+### Manuel Test
+
+```bash
+php api-simple/cron.php
+```
+
+---
+
 ## 🤝 Katkıda Bulunun
 
 PR'lar açıktır! Özellikle:
